@@ -1,0 +1,267 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(24, 20, 20);
+  background-image: url("back-1.jpg"), url("back-2.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center top, center bottom;
+  background-size: contain;
+  background-attachment: scroll;
+  color: white;
+  scroll-behavior: smooth;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 30px;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  text-decoration: none;
+  margin: 10px;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: 0.25s color, 0.25s text-shadow;
+
+  &:hover {
+    text-shadow: 0 0 5px rgb(252, 152, 3);
+  }
+}
+
+.home {
+  color: rgba(255, 222, 32, 0.91);
+}
+
+.title {
+  position: relative;
+  color: rgb(252, 152, 3);
+  font-size: 2rem;
+  top: -20px;
+  left: 100px;
+  transition: 0.25s color, 0.25s text-shadow;
+  &:hover {
+    color: white;
+  }
+}
+
+.main {
+  margin-top: 100px;
+  margin-left: 100px;
+}
+
+.main p {
+  width: 50%;
+  font-size: 2rem;
+  font-style: italic;
+}
+
+.main button {
+  color: rgb(14, 13, 13);
+  background-color: rgb(252, 206, 3);
+  border: none;
+  border-radius: 40px;
+
+  font-weight: bold;
+  padding: 10px;
+  width: 180px;
+  font-size: 1.2rem;
+  transition: 0.25s background-color, 0.25s color;
+
+  &:hover {
+    background-color: rgb(243, 28, 28);
+    color: rgb(252, 206, 3);
+
+    cursor: pointer;
+  }
+}
+
+.main-title {
+  font-size: 4rem;
+}
+
+.cards {
+  width: 90%;
+  h1 {
+    text-align: center;
+    font-size: 3rem;
+  }
+  p {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  img {
+    width: 300px;
+    margin: 20px;
+    border-radius: 20px;
+  }
+}
+
+.card {
+  width: 300px;
+  h3 {
+    position: relative;
+    top: -20px;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  button {
+    display: block;
+    position: relative;
+    top: -20px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: red;
+    color: white;
+    border: none;
+    width: 120px;
+    padding: 15px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 0.25s background-color;
+    &:hover {
+      background-color: rgb(255, 170, 0);
+    }
+  }
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu {
+  background-color: rgba(255, 255, 255, 0.195);
+  margin-top: 60px;
+  .item-img {
+    width: 100px;
+    border-radius: 25px;
+    margin-right: 20px;
+    height: 100px;
+  }
+  .menu-title {
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  .title-row {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+
+    p {
+      font-size: 1.5rem;
+      font-weight: bold;
+      font-style: italic;
+      color: rgb(255, 170, 0);
+    }
+
+    button {
+      display: inline-block;
+      height: 30px;
+    }
+  }
+
+  .item {
+    display: flex;
+    width: 600px;
+    padding: 0;
+  }
+
+  .column {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.thanks {
+  text-align: center;
+}
+
+.owner img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 350px;
+  .contact {
+    text-align: center;
+    background-color: rgb(112, 108, 108);
+    padding: 20px;
+  }
+
+  .form {
+    background-color: black;
+    padding-left: 40px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+
+    input {
+      border: none;
+      height: 30px;
+      background-color: rgb(112, 108, 108);
+      color: white;
+    }
+
+    .special-form {
+      width: 300px;
+      height: 200px;
+    }
+
+    button {
+      background-color: red;
+      color: white;
+      width: 100px;
+      font-weight: bold;
+      height: 30px;
+      border: none;
+      border-radius: 25px;
+      font-size: 1rem;
+    }
+  }
+}
+
+input::placeholder {
+  color: white;
+}
+
+.bottom-section {
+  h1 {
+    font-size: 5rem;
+    text-align: center;
+  }
+  .bottom-card {
+    width: 20%;
+    text-align: justify;
+    margin: 10px;
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h3 {
+      text-align: center;
+    }
+  }
+
+  .bottom-cards {
+    display: flex;
+    justify-content: center;
+  }
+}
