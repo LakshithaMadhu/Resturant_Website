@@ -4,7 +4,7 @@ body {
   background-image: url("./Images/back-1.jpg"), url("./images/back-2.jpg");
   background-repeat: no-repeat, no-repeat;
   background-position: center top, center bottom;
-  background-size: contain;
+  background-size: cover; /* Changed to cover for better responsiveness */
   background-attachment: scroll;
   color: white;
   scroll-behavior: smooth;
@@ -20,7 +20,6 @@ nav {
 
 nav ul {
   list-style-type: none;
-
   padding-top: 30px;
 }
 
@@ -34,11 +33,11 @@ nav ul li a {
   color: white;
   font-size: 1.2rem;
   font-weight: bold;
-  transition: 0.25s color, 0.25s text-shadow;
+  transition: color 0.25s, text-shadow 0.25s;
+}
 
-  &:hover {
-    text-shadow: 0 0 5px rgb(252, 152, 3);
-  }
+nav ul li a:hover {
+  text-shadow: 0 0 5px rgb(252, 152, 3);
 }
 
 .home {
@@ -49,10 +48,11 @@ nav ul li a {
   color: rgb(252, 152, 3);
   font-size: 2rem;
   margin-left: 20px;
-  transition: 0.25s color, 0.25s text-shadow;
-  &:hover {
-    color: white;
-  }
+  transition: color 0.25s, text-shadow 0.25s;
+}
+
+.title:hover {
+  color: white;
 }
 
 .logo-row {
@@ -60,7 +60,6 @@ nav ul li a {
   display: flex;
   margin-left: 5%;
   width: 200px;
-
   align-items: center;
   justify-content: space-around;
 }
@@ -92,19 +91,17 @@ nav ul li a {
   background-color: rgb(252, 206, 3);
   border: none;
   border-radius: 40px;
-
   font-weight: bold;
   padding: 10px;
   width: 180px;
   font-size: 1.2rem;
-  transition: 0.25s background-color, 0.25s color;
+  transition: background-color 0.25s, color 0.25s;
+}
 
-  &:hover {
-    background-color: rgb(243, 28, 28);
-    color: rgb(252, 206, 3);
-
-    cursor: pointer;
-  }
+.main button:hover {
+  background-color: rgb(243, 28, 28);
+  color: rgb(252, 206, 3);
+  cursor: pointer;
 }
 
 .main-title {
@@ -119,19 +116,22 @@ nav ul li a {
     text-align: center;
     font-size: 3rem;
   }
+
   p {
     text-align: center;
     font-size: 1.2rem;
   }
+
   img {
-    width: 300px;
+    width: 100%; /* Set images to take full width of their container */
+    max-width: 300px; /* Maintain a max width */
     margin: 20px;
     border-radius: 20px;
     transition: box-shadow 0.3s;
+  }
 
-    &:hover {
-      box-shadow: 0 0 15px rgb(255, 255, 255);
-    }
+  img:hover {
+    box-shadow: 0 0 15px rgb(255, 255, 255);
   }
 }
 
@@ -144,6 +144,7 @@ nav ul li a {
     font-size: 1.5rem;
     text-align: center;
   }
+
   button {
     display: block;
     position: relative;
@@ -158,10 +159,11 @@ nav ul li a {
     border-radius: 25px;
     font-size: 1rem;
     font-weight: bold;
-    transition: 0.25s background-color;
-    &:hover {
-      background-color: rgb(255, 170, 0);
-    }
+    transition: background-color 0.25s;
+  }
+
+  button:hover {
+    background-color: rgb(255, 170, 0);
   }
 }
 
@@ -173,12 +175,14 @@ nav ul li a {
 .menu {
   background-color: rgba(255, 255, 255, 0.195);
   margin-top: 60px;
+
   .item-img {
     width: 100px;
     border-radius: 25px;
     margin-right: 20px;
     height: 100px;
   }
+
   .menu-title {
     text-align: center;
     font-size: 3rem;
@@ -228,8 +232,7 @@ nav ul li a {
 .form-section {
   display: flex;
   justify-content: center;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin: 100px 0;
 
   .contact {
     text-align: center;
@@ -249,7 +252,6 @@ nav ul li a {
     input {
       border: none;
       height: 30px;
-
       background-color: rgb(112, 108, 108);
       color: white;
     }
@@ -279,14 +281,17 @@ input::placeholder {
 .bottom-section {
   background-color: rgba(255, 255, 255, 0.184);
   height: 900px;
+
   h1 {
     font-size: 5rem;
     text-align: center;
   }
+
   .bottom-card {
     width: 20%;
     text-align: justify;
     margin: 10px;
+
     img {
       display: block;
       margin-left: auto;
@@ -329,26 +334,8 @@ input::placeholder {
   background-color: black;
   padding: 30px;
 
-  .menu-nav {
-    display: flex;
-    flex-direction: column;
-
-    a {
-      color: white;
-      text-decoration: none;
-    }
-  }
-
-  .info-nav {
-    display: flex;
-    flex-direction: column;
-
-    a {
-      color: white;
-      text-decoration: none;
-    }
-  }
-
+  .menu-nav,
+  .info-nav,
   .useful-nav {
     display: flex;
     flex-direction: column;
@@ -379,7 +366,7 @@ input::placeholder {
 
   h1 {
     font-size: 3rem;
-    padding: 0 10% 0 10%;
+    padding: 0 10%;
     text-align: center;
   }
 }
@@ -443,4 +430,50 @@ input::placeholder {
   font-size: 3rem;
   color: white;
   margin-bottom: 40px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .main {
+    margin-left: 20px;
+  }
+
+  .main-title {
+    font-size: 3rem;
+  }
+
+  .main p {
+    width: 100%;
+  }
+
+  .cards img {
+    width: 100%;
+    max-width: 200px; /* Adjust max width for smaller screens */
+  }
+
+  .bottom-section {
+    height: auto; /* Allow for flexible height on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul li a {
+    font-size: 1rem;
+  }
+
+  .booking {
+    font-size: 0.8rem;
+  }
+
+  .bottom-section h1 {
+    font-size: 3rem;
+  }
+
+  .story h1 {
+    font-size: 2rem;
+  }
+
+  .story h3 {
+    font-size: 1.8rem;
+  }
 }
